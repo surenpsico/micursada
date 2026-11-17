@@ -446,7 +446,7 @@
     h += '<div class="toolbar" style="margin-top:18px"><div class="toolbar__row"><div class="search"><label class="sr" for="cq">Buscar materia</label>' + ICON.search + '<input id="cq" type="search" placeholder="Buscar materia…" value="' + esc(career.q) + '" autocomplete="off"></div></div>' +
       '<div class="chips" role="group" aria-label="Filtrar materias" id="carFilters"></div></div>';
     h += '<div id="carList"></div>';
-    if (PLAN.requisitos && PLAN.requisitos.length) h += '<section class="ciclo"><div class="ciclo__h"><h2>Otros requisitos</h2><small>Figuran en el plan, sin correlativas publicadas</small></div><div class="reqs" id="carReqs"></div></section>';
+    if (PLAN.requisitos && PLAN.requisitos.length) h += '<section class="ciclo"><div class="ciclo__h"><h2>Otros requisitos</h2><small>Revisá en la <a href="' + PLAN.fuente.url + '" target="_blank" rel="noopener">página de la Facultad</a> los requisitos específicos de cada uno.</small></div><div class="reqs" id="carReqs"></div></section>';
     if (PLAN.reglas && PLAN.reglas.length) h += '<div class="note" style="margin-top:22px">' + ICON.info + "<div>" + PLAN.reglas.map(function (r) { return "<p>" + esc(r) + "</p>"; }).join("") + "</div></div>";
     if (PLAN.nota) h += '<div class="note" style="margin-top:12px">' + ICON.info + "<div>" + esc(PLAN.nota) + "</div></div>";
     h += '<div class="note" style="margin-top:12px">' + ICON.info + "<div>Las correlativas se toman de la página del plan en el sitio de la Facultad. Si una materia tiene cátedras A y B, comparten correlativas.</div></div>";
