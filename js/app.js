@@ -468,7 +468,7 @@
       (PLAN.materias.some(function (m) { return m.opt; }) ? '<p class="src-line"><b>Electivas permanentes aprobadas:</b> ' + c.counts.el + ". No cuentan en el total de arriba.</p>" : "") +
       '<div class="crit"><span><b>Para cursar una materia, cuento sus correlativas como:</b></span><div class="seg" role="group" aria-label="Criterio de correlativas">' +
       '<button type="button" data-crit="apr" aria-pressed="' + (crit === "apr") + '">Aprobadas</button><button type="button" data-crit="reg" aria-pressed="' + (crit === "reg") + '">Regulares o aprobadas</button></div>' +
-      "<small>La página del plan no aclara si alcanza con tener regular la correlativa. Verificalo en Guaraní o en Despacho de Estudiantes antes de inscribirte.</small></div></div>";
+      "</div></div>";
 
     var nSt = { can: 0, reg: 0, apr: 0 }; PLAN.materias.forEach(function (m) { var s = c.res[m.id].state; if (nSt[s] !== undefined) nSt[s]++; });
     var F = [["todas", "Todas", PLAN.materias.length], ["can", "Podés cursar", nSt.can], ["reg", "Regulares", nSt.reg], ["sin", "Sin aprobar", PLAN.materias.length - nSt.apr], ["apr", "Aprobadas", nSt.apr]];
