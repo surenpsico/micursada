@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surenpsico.github.io/micursada/sitemap.xml
